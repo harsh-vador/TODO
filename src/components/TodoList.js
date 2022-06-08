@@ -46,9 +46,7 @@ function TodoList() {
         setTodos(updatedTodos);
     };
     const deleteAll = id =>{
-        console.log(id)
-        const removeArr = [...todos].filter(todo => console.log(todo));
-
+        const removeArr = [...todos].filter(todo => todo.id===id);
         setTodos(removeArr);
     }
     
@@ -57,7 +55,7 @@ function TodoList() {
             <h1>To-Do List</h1>
             <TodoForm onSubmit={addTodo} />
             <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo}  />
-            <button className="todo-button" onClick={deleteAll}>Clear All</button>
+            <button className="todo-button" onClick={deleteAll}>Delete All</button>
         </div>
     );
 }
