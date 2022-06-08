@@ -17,8 +17,6 @@ function TodoForm(props) {
             text: input
         });
 
-        console.log(input);
-
         setInput('');
 
     };

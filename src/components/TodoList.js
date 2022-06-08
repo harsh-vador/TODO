@@ -27,7 +27,6 @@ function TodoList() {
         const newTodos = [todo, ...todos];
 
         setTodos(newTodos);
-        console.log(...todos);
     };
 
 
@@ -45,7 +44,6 @@ function TodoList() {
             return todo;
         })
         setTodos(updatedTodos);
-        console.log(todos)
     };
     const deleteAll = id =>{
         console.log(id)
