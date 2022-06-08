@@ -31,13 +31,11 @@ function TodoList() {
 
 
     const removeTodo = id => {
-        const removeArr = [...todos].filter(todo => todo.id !== id);
-
-        setTodos(removeArr);
+        setTodos((todo)=>todo.filter(t => t.id !== id))
     };
 
     const completeTodo = id => {
-        let updatedTodos = todos.map(todo => {
+        const updatedTodos = todos.map(todo => {
             if (todo.id === id) {
                 todo.isComplete = !todo.isComplete
             }
