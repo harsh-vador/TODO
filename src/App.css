@@ -164,7 +164,7 @@ h1 {
   font-size: larger;
 }
 .todo-content{
-  margin-right: 13rem;
+  margin-right: 12rem;
 }
 
 @media (min-width: 320px) and (max-width: 650px) {
