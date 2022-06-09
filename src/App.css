@@ -34,6 +34,8 @@ body::after {
 }
 
 .todo-app {
+  height: 10px;
+
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -89,7 +91,8 @@ h1 {
 .todo-button {
   padding: 16px;
   border: none;
-  border-radius: 0 4px 4px 0;
+  margin-top: 10px;
+  border-radius: 4px;
   cursor: pointer;
   outline: none;
   background-color: #182748;
@@ -100,13 +103,24 @@ h1 {
 .todo-button.edit {
   padding: 16px 22px;
 }
-
+.todo-button-add{
+  padding: 16px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  background-color: #182748;
+  color: #fff;
+}
 .todo-container {
   display: flex;
   flex-direction: row;
   position: relative;
 }
-
+.todo{
+  display: -webkit-inline-box;
+}
 .todo-row {
   display: flex;
   justify-content: space-between;
@@ -118,7 +132,6 @@ h1 {
   border: 2px solid;
   padding: 12px;
   border-radius: 5px;
-  width: 90%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -138,10 +151,11 @@ h1 {
 }
 
 .icons {
-  display: flex;
+  display: flex-end;
   align-items: center;
   font-size: 24px;
   cursor: pointer;
+  right:0 ;
 }
 
 .edit-icon,
@@ -151,14 +165,19 @@ h1 {
 }
 
 .delete-icon:hover {
-  font-size: larger;
   color: #182748;
 }
-.edit-icon:hover {
-  font-size: larger;
-}
+
 .todo-content {
-  margin-right: 12rem;
+  align-self: center;
+  max-width: 350px;
+  margin-left: 10px;
+}
+
+.todo-list{
+  height: 230px;
+  width: 500px;
+  overflow-y: scroll;
 }
 
 @media (min-width: 320px) and (max-width: 650px) {

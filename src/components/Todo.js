@@ -31,13 +31,15 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
             className={todo.isComplete ? "todo-row complete" : "todo-row"}
             key={index}
           >
-            <input type="checkbox" onClick={() => deleteCheckBox(todo.id)} />
-            <div
-              className="todo-content"
-              key={todo.id}
-              onClick={() => deleteCheckBox(todo.id)}
-            >
-              {todo.text}
+            <div className="todo">
+              <input type="checkbox" onClick={() => deleteCheckBox(todo.id)} />
+              <div
+                className="todo-content"
+                key={todo.id}
+                onClick={() => deleteCheckBox(todo.id)}
+              >
+                {todo.text}
+              </div>
             </div>
             <div className="icons">
               <TiEdit

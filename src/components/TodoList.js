@@ -17,7 +17,6 @@ function TodoList() {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
-
   const validateinput = (todo) => !todo || /^\s*$/.test(todo);
 
   const addTodo = (todo) => {
@@ -41,7 +40,6 @@ function TodoList() {
   const removeTodo = (id) => {
     setTodos((todo) => todo.filter((t) => t.id !== id));
   };
-
   const completeTodo = (id) => {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
@@ -59,15 +57,19 @@ function TodoList() {
     <div className="todo-context">
       <h1>To-Do List</h1>
       <TodoForm onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
-      />
-      <button className="todo-button" onClick={deleteAll}>
-        Delete All
-      </button>
+      <div className="todo-list">
+        <Todo
+          todos={todos}
+          completeTodo={completeTodo}
+          removeTodo={removeTodo}
+          updateTodo={updateTodo}
+        />
+      </div>
+      {todos.length ? (
+        <button className="todo-button" onClick={deleteAll}>
+          Reset Tasks
+        </button>
+      ) : null}
     </div>
   );
 }
