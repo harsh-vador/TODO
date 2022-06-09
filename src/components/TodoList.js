@@ -18,8 +18,7 @@ function TodoList() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
 
-  const validateinput = (todo)=> (!todo || /^\s*$/.test(todo))
-  
+  const validateinput = (todo) => !todo || /^\s*$/.test(todo);
 
   const addTodo = (todo) => {
     if (validateinput(todo.text)) {
