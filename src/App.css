@@ -99,7 +99,10 @@ h1 {
 }
 
 
-
+.todo-button.edit {
+ 
+  padding: 16px 22px;
+}
 
 
 .todo-container {
@@ -148,16 +151,21 @@ h1 {
   cursor: pointer;
 }
 
-.delete-icon {
+.edit-icon,.delete-icon {
   margin-right: 5px;
-  color: #fff;
+  color: #182748;
 }
 
 .delete-icon:hover {
   font-size: larger;
   color:#182748;
 }
-
+.edit-icon:hover{
+  font-size: larger;
+}
+.todo-content{
+  margin-right: 13rem;
+}
 
 @media (min-width: 320px) and (max-width: 650px) {
   .todo-app {
