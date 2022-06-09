@@ -37,7 +37,7 @@ function TodoForm(props) {
       />
       <button
         onClick={handleSubmit}
-        className={props.edit ? "todo-button edit" : "todo-button"}
+        className={props.edit ? "todo-button edit" : "todo-button-add"}
       >
         {props.edit ? "Update" : "Add"}
       </button>
